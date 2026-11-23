@@ -114,6 +114,7 @@ document.getElementById("main").innerHTML = `
   <p class="roles seq" style="--s:1.5s">${D.roles.join("<br>")}</p>
   <p class="tag seq" style="--s:1.65s">${D.tagline}</p>
   <div class="cta seq" style="--s:1.72s"><span class="avail">${D.avail}</span><a class="btn solid" href="${D.resume}" download>Download resume</a></div>
+  <figure class="wf seq" style="--s:1.9s"><picture><source media="(min-width:1700px) and (prefers-color-scheme:dark)" srcset="images/workflow-live-dark.svg"><source media="(min-width:1700px)" srcset="images/workflow-live-light.svg"><source media="(prefers-color-scheme:dark)" srcset="images/workflow-wide-dark.svg"><img src="images/workflow-wide-light.svg" width="480" height="300" alt="Animated state machine: Initialize, Get transaction, Process, Set status, End, with an exception at Process looping back for a retry."></picture></figure>
   <div class="facts">${D.facts.map((f,i)=>`<div class="fact seq" style="--s:${(1.8+i*.14).toFixed(2)}s"><h4>${f[0]}</h4><p>${f[1]}</p></div>`).join("")}</div>
   <div class="prof">
     <figure class="photo" data-r>${D.photo ? `<img src="${D.photo}" alt="Portrait of ${D.first} ${D.last}">` : "Photo placeholder<br>set DATA.photo"}</figure>
